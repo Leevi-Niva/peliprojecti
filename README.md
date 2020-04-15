@@ -19,7 +19,6 @@ document.getElementById("edu").value = ""
 </script>
 <!-- create table -->
 <body>
-<div class = title >Edureka JavaScript Calculator</div>
 <table border="1">
 <tr>
 <td><input type="button" value="c" onclick="clr()"/> </td>
