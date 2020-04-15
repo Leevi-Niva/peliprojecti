@@ -26,7 +26,7 @@
          .title{
          margin-bottom: 10px;
          text-align:center;
-         width: 250px;
+         width: 500px;
          color:yellow;
          border: red 2px;
          }
