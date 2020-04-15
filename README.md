@@ -59,7 +59,7 @@ document.getElementById("edu").value = ""
 border-radius: 10px;
 margin-bottom: 10px;
 text-align:center;
-width: 210px;
+width: 500px;
 color:#ff4456;
 border: solid black 1px;
 }
