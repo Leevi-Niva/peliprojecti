@@ -5,7 +5,7 @@ Laskin
 </head>
 <body>
 <div class ="wrap">
-I <form name ="cal">
+<form name ="cal">
 <input type ="text" name ="display">
 <br><br>
 <input type ="button" value ="9" onclick ="cal.display.value+='9'">
