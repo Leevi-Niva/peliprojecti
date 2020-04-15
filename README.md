@@ -1,88 +1,117 @@
+<!DOCTYPE html>
 <html>
-   <head>
-      <script>
-         //function that display value
-         function dis(val)
-         {
-             document.getElementById("result").value+=val
-         }
+<head>
+    <title>Calculator</title>
+</head>
+<body>
 
-         //function that evaluates the digit and return result
-         function solve()
-         {
-             let x = document.getElementById("result").value
-             let y = eval(x)
-             document.getElementById("result").value = y
-         }
+<style>
+    .calculator-body {
+        background-color: #CCCCCC;
+        max-width: 300px;
+        margin: 0 auto;
+    }
 
-         //function that clear the display
-         function clr()
-         {
-             document.getElementById("result").value = ""
-         }
-      </script>
-      <!-- for styling -->
-      <style>
-         .title{
-         margin-bottom: 10px;
-         text-align:center;
-         width: 500px;
-         color:yellow;
-         border: red 2px;
-         }
+    form {
+        margin: 0 auto;
+        max-width: 960px;
+        text-align: center;
+    }
 
-         input[type="button"]
-         {
-         background-color:red;
-         color: black;
-         border: solid black 2px;
-         width:100%
-         }
+    #screen {
+        padding: 5px;
+        font-size: 22px;
+        position: relative;
+    }
+</style>
 
-         input[type="text"]
-         {
-         background-color:red;
-         border: solid black 2px;
-         width:100%
-         }
-      </style>
-   </head>
-   <!-- create table -->
-   <body>
-      <div class = title >GeeksforGeeks Calculator</div>
-      <table border="1">
-         <tr>
-            <td colspan="3"><input type="text" id="result"/></td>
-            <!-- clr() function will call clr to clear all value -->
-            <td><input type="button" value="c" onclick="clr()"/> </td>
-         </tr>
-         <tr>
-            <!-- create button and assign value to each button -->
-            <!-- dis("1") will call function dis to display value -->
-            <td><input type="button" value="1" onclick="dis('1')"/> </td>
-            <td><input type="button" value="2" onclick="dis('2')"/> </td>
-            <td><input type="button" value="3" onclick="dis('3')"/> </td>
-            <td><input type="button" value="/" onclick="dis('/')"/> </td>
-         </tr>
-         <tr>
-            <td><input type="button" value="4" onclick="dis('4')"/> </td>
-            <td><input type="button" value="5" onclick="dis('5')"/> </td>
-            <td><input type="button" value="6" onclick="dis('6')"/> </td>
-            <td><input type="button" value="-" onclick="dis('-')"/> </td>
-         </tr>
-         <tr>
-            <td><input type="button" value="7" onclick="dis('7')"/> </td>
-            <td><input type="button" value="8" onclick="dis('8')"/> </td>
-            <td><input type="button" value="9" onclick="dis('9')"/> </td>
-            <td><input type="button" value="+" onclick="dis('+')"/> </td>
-         </tr>
-         <tr>
-            <td><input type="button" value="." onclick="dis('.')"/> </td>
-            <td><input type="button" value="0" onclick="dis('0')"/> </td>
-            <!-- solve function call function solve to evaluate value -->
-            <td><input type="button" value="=" onclick="solve()"/> </td>
-            <td><input type="button" value="*" onclick="dis('*')"/> </td>
-         </tr>
-      </table>
-   </body>
-</html>    
+<?php
+
+
+
+    $number = $_POST['number'];
+    $op = $_POST['op'];
+    $ops = $_POST['ops'];
+    $store = $_POST['store'];
+    $screen = $_POST['screen'];
+    $ans = $_POST['equal'];
+
+    if (isset($_POST['screen'])) {
+        $screen = $number;
+        $screen = $ans;
+    }
+
+    if (isset($_POST['op'])) {
+        $ops = $op;
+        $screen .= $ops;
+        $ans += $number;
+    }
+
+    if (isset($_POST['number'])) {
+        $screen = $number;
+        $number = $screen;
+//        $number .= $tore;
+    }
+    //    $screen .= $ans;
+    if (isset($_POST['equal'])) {
+        $ans = $number + $op + $ans;
+
+        //    if(isset($_POST['equal']))
+        //    {
+        switch ($op) {
+            case '-':
+                $ans = $number - $ans;
+                //                $screen = $ans;
+                break;
+
+            case '+':
+                $ans = $number + $ans;
+                //                $screen = $ans;
+                break;
+
+            case '*':
+                $ans = $number * $ans;
+                break;
+        }
+    }
+?>
+
+<form action="" method="post">
+    <div class="calculator-body calculator">
+        <div class="screen-wrapper">
+            <input type="text" id="screen" name="screen" value="<?php echo $screen; ?>">
+        </div>
+        <div class="column">
+            <input type="reset" value="c" name="op" id="clear">
+            <input type="submit" value="del" name="op" id="backspace"/>
+        </div>
+        <div class="column">
+            <input type="submit" value="7" name="number"/>
+            <input type="submit" value="8" name="number"/>
+            <input type="submit" value="9" name="number"/>
+            <input type="submit" value="/" name="op" id="divide"/>
+        </div>
+        <div class="column">
+            <input type="submit" value="4" name="number"/>
+            <input type="submit" value="5" name="number"/>
+            <input type="submit" value="6" name="number"/>
+            <input type="submit" value="*" name="op" id="multiply"/>
+        </div>
+        <div class="column">
+            <input type="submit" value="1" name="number"/>
+            <input type="submit" value="2" name="number"/>
+            <input type="submit" value="3" name="number"/>
+            <input type="submit" value="-" name="op" id="subtract"/>
+        </div>
+        <div class="column">
+            <input type="submit" value="0" name="number"/>
+            <input type="submit" value="." name="number" id="dot"/>
+            <input type="submit" value="=" name="equal" id="equal"/>
+            <input type="submit" name="op" value="+" id="plus"/>
+        </div>
+        <input type="text" value="<?php echo $ops; ?>" name="ops"/>
+        <input type="text" value="<?php echo $ans; ?>" name="store"/>
+        <input type="text" value="<?php echo $ans; ?>" name="equal"/>
+</form>
+</body>
+</html>
