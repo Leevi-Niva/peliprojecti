@@ -23,11 +23,14 @@ I <form name ="cal">
 <input type ="button" value ="+" onclick ="cal.display.value+='+'">
 <input type ="button" value ="0" onclick ="cal.display.value+='0'">
 <input type ="button" value ="*" onclick ="cal.display.value+='*'">
-<input type ="button" value ="=" onclick ="cal.display.value =eval(cal.display.value'='">
 <br><br>
 <input type ="button" value ="-" onclick ="cal.display.value+='-'">
 <input type ="button" value ="%" onclick ="cal.display.value+='%'">
 <input type ="button" value ="/" onclick ="cal.display.value+='/'">
+<br><br>
+
+<input type ="button" value ="=" onclick ="cal.display.value =eval(cal.display.value'='">
+
 </form>
 </div>
 </body>
