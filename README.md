@@ -1,82 +1,27 @@
-<script>
-//function for displaying values
-function dis(val)
-{
-document.getElementById("edu").value+=val
- }
-//function for evaluation
-function solve()
-{
-let x = document.getElementById("edu").value
-let y = eval(x)
-document.getElementById("edu").value = y
-}
-//function for clearing the display
-function clr()
-{
-document.getElementById("edu").value = ""
-}
-</script>
-<!-- create table -->
-<body>
-<table border="1">
-<tr>
-<td><input type="button" value="c" onclick="clr()"/> </td>
-<td colspan="3"><input type="text" id="edu"/></td>
-<!-- clr() function will call clr to clear all value -->
-</tr>
-<tr>
-<!-- creating buttons and assigning values-->
-<td><input type="button" value="+" onclick="dis('+')"/> </td>
-<td><input type="button" value="1" onclick="dis('1')"/> </td>
-<td><input type="button" value="2" onclick="dis('2')"/> </td>
-<td><input type="button" value="3" onclick="dis('3')"/> </td>
-</tr>
-<tr>
-<td><input type="button" value="-" onclick="dis('-')"/> </td>
-<td><input type="button" value="4" onclick="dis('4')"/> </td>
-<td><input type="button" value="5" onclick="dis('5')"/> </td>
-<td><input type="button" value="6" onclick="dis('6')"/> </td>
-</tr>
-<tr>
-<td><input type="button" value="*" onclick="dis('*')"/> </td>
-<td><input type="button" value="7" onclick="dis('7')"/> </td>
-<td><input type="button" value="8" onclick="dis('8')"/> </td>
-<td><input type="button" value="9" onclick="dis('9')"/> </td>
-</tr>
-<tr>
-<td><input type="button" value="/" onclick="dis('/')"/> </td>
-<td><input type="button" value="." onclick="dis('.')"/> </td>
-<td><input type="button" value="0" onclick="dis('0')"/> </td>
-<!-- Evaluating function call eval()-->
-<td><input type="button" value="=" onclick="solve()"/> </td>
-</tr>
-</table>
+<html>
+<head>
+<title>HTML Calculator</title>
+</head>
+<body bgcolor= "#000000" text= "gold">
+<form name="calculator" >
+<input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+<input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+<input type="button" value="3" onClick="document.calculator.ans.value+='3'"><br>
+<input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+<input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+<input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+<input type="button" value="7" onClick="document.calculator.ans.value+='7'"><br>
+<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+<input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+<input type="button" value="+" onClick="document.calculator.ans.value+='+'"><br>
+<input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+<input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+
+<input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+<input type="reset" value="Reset">
+<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+<br>Solution is <input type="textfield" name="ans" value="">
+</form>
 </body>
-<!-- for styling -->
-<style>
-.title{
-border-radius: 10px;
-margin-bottom: 10px;
-text-align:center;
-width: 210px;
-color:#ff4456;
-border: solid black 1px;
-}
-input[type="button"]
-{
-border-radius: 10px;
-background-color:#ff4456;
-color: black;
-border-color:#ff4456 ;
-width:100%;
-}
-input[type="text"]
-{
-border-radius: 10px;
-text-align: right;
-background-color:white;
-border-color: black ;
-width:100%
-}
-</style>
+</html>
