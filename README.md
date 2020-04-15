@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Laskin
 <html>
 <head>
 <title> caculator </title>
@@ -28,9 +28,7 @@ I <form name ="cal">
 <input type ="button" value ="%" onclick ="cal.display.value+='%'">
 <input type ="button" value ="/" onclick ="cal.display.value+='/'">
 <br><br>
-
 <input type ="button" value ="=" onclick ="cal.display.value =eval(cal.display.value'='">
-
 </form>
 </div>
 </body>
