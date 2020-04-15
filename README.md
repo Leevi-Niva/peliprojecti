@@ -26,8 +26,8 @@
          .title{
          margin-bottom: 10px;
          text-align:center;
-         width: 210px;
-         color:green;
+         width: 250px;
+         color:yellow;
          border: solid black 2px;
          }
 
@@ -41,7 +41,7 @@
 
          input[type="text"]
          {
-         background-color:white;
+         background-color:black;
          border: solid black 2px;
          width:100%
          }
