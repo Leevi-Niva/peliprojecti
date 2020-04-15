@@ -41,7 +41,7 @@
 
          input[type="text"]
          {
-         background-color:white;
+         background-color:red;
          border: solid black 2px;
          width:100%
          }
