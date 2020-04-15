@@ -24,4 +24,34 @@
 <br>Solution is <input type="textfield" name="ans" value="">
 </form>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+<!-- for styling -->
+<style>
+.title{
+border-radius: 10px;
+margin-bottom: 10px;
+text-align:center;
+width: 500px;
+color:#ff4456;
+border: solid black 1px;
+}
+input[type="button"]
+{
+border-radius: 10px;
+background-color:#ff4456;
+color: black;
+border-color:#ff4456 ;
+width:100%;
+}
+input[type="text"]
+{
+border-radius: 10px;
+text-align: right;
+background-color:white;
+border-color: black ;
+width:100%
+}
+</style>
+>>>>>>> 3ab041dd5806a1bd26fe8fdf5e22f687973a9542
