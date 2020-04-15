@@ -33,15 +33,15 @@
 
          input[type="button"]
          {
-         background-color:red;
-         color: black;
+         background-color:green;
+         color: white;
          border: solid black 2px;
          width:100%
          }
 
          input[type="text"]
          {
-         background-color:black;
+         background-color:white;
          border: solid black 2px;
          width:100%
          }
