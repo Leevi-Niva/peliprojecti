@@ -28,7 +28,7 @@
          text-align:center;
          width: 250px;
          color:yellow;
-         border: solid black 2px;
+         border: red 2px;
          }
 
          input[type="button"]
