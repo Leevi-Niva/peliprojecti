@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta charset="utf-8">
-   <title>Number Guessing Game</title>
+   <title>Numeron arvaus peli</title>
 
    <style>
        html {
@@ -19,13 +19,12 @@
 </head>
 
 <body>
-<h1>Guess The Number</h1>
+<h1>Arvaa Numero</h1>
 
-<p>We have selected a random number between 1 - 10.
-See if you can guess it.</p>
+<p>Yritä arvata numero 1-10 väliltä</p>
 
 <div class="form">
-   <label for="guessField">Enter a guess: </label>
+   <label for="guessField">Arvaa: </label>
    <input type = "text" id = "guessField" class = "guessField">
    <input type = "submit" value = "Submit guess"
           class = "guessSubmit" id = "submitguess">
@@ -47,19 +46,19 @@ See if you can guess it.</p>
 
   if(x == y)
   {
-      alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
-              + guess + " GUESS ");
+      alert("Onnittelut! Arvasit oikean numeron "
+              + guess + " yrityksellä ");
   }
   else if(x > y) /* if guessed number is greater
                   than actual number*/
   {
       guess++;
-      alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+      alert("Yritä pienempää numeroa!");
   }
   else
   {
       guess++;
-      alert("OOPS SORRY!! TRY A GREATER NUMBER")
+      alert("Yritä suurempaa numeroa!")
   }
 }
 </script>
