@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
-   <title>Numeron arvaus peli</title>
+<meta charset="utf-8">
+<title>Numeron arvaus peli</title>
 
-   <style>
-       html {
-   font-family: verdana;
-   }
+<style>
+html {
+font-family: verdana;
+}
 
-       body {
-   width: 50%;
-   max-width: 800px;
-   min-width: 480px;
-   margin: 0 auto;
-   }
-   </style>
+body {
+width: 50%;
+max-width: 800px;
+min-width: 480px;
+margin: 0 auto;
+}
+</style>
 </head>
 
 <body>
@@ -24,38 +24,37 @@
 <p>Yritä arvata numero 1-10 väliltä</p>
 
 <div class="form">
-   <label for="guessField">Arvaa: </label>
-   <input type = "text" id = "guessField" class = "guessField">
-   <input type = "submit" value = "Vahvista arvaus"
-          class = "guessSubmit" id = "submitguess">
+<label for="guessField">Arvaa: </label>
+<input type = "text" id = "guessField" class = "guessField">
+<input type = "submit" value = "Vahvista arvaus"
+class = "guessSubmit" id = "submitguess">
 </div>
 
 <script type = "text/javascript">
 
-   var y = Math.floor(Math.random() * 10 + 1);
+var y = Math.floor(Math.random() * 10 + 1);
 
-   var guess = 1;
+var guess = 1;
 
-   document.getElementById("submitguess").onclick = function(){
+document.getElementById("submitguess").onclick = function(){
 
-  var x = document.getElementById("guessField").value;
+var x = document.getElementById("guessField").value;
 
-  if(x == y)
-  {
-      alert("Onnittelut! Arvasit oikean numeron "
-              + guess + ":llä yrityksellä ");
-  }
-  else if(x > y) /* if guessed number is greater
-                  than actual number*/
-  {
-      guess++;
-      alert("Yritä pienempää numeroa!");
-  }
-  else
-  {
-      guess++;
-      alert("Yritä suurempaa numeroa!")
-  }
+if(x == y)
+{
+alert("Onnittelut! Arvasit oikean numeron "
++ guess + ":llä yrityksellä ");
+}
+else if(x > y) 
+{
+guess++;
+alert("Yritä pienempää numeroa!");
+}
+else
+{
+guess++;
+alert("Yritä suurempaa numeroa!")
+}
 }
 </script>
 </body>
