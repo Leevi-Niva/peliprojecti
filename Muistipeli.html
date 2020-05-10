@@ -24,8 +24,7 @@ div#memory_board > div{
 }
 </style>
 <script>
-// Scripted By Adam Khoury in connection with the following video tutorial:
-// http://www.youtube.com/watch?v=c_ohDPWmsM0
+
 var memory_array = ['1','1','2','2','3','3','4','4','5','5','6','6','7','7','8','8','9','9','10','10','11','11','12','12'];
 var memory_values = [];
 var memory_tile_ids = [];
@@ -60,25 +59,25 @@ function memoryFlipTile(tile,val){
 			memory_tile_ids.push(tile.id);
 			if(memory_values[0] == memory_values[1]){
 				tiles_flipped += 2;
-				// Clear both arrays
+
 				memory_values = [];
             	memory_tile_ids = [];
-				// Check to see if the whole board is cleared
+
 				if(tiles_flipped == memory_array.length){
-					alert("Board cleared... generating new board");
+					alert("Voitit pelin, luodaan uusi lauta.");
 					document.getElementById('memory_board').innerHTML = "";
 					newBoard();
 				}
 			} else {
 				function flip2Back(){
-				    // Flip the 2 tiles back over
+				    
 				    var tile_1 = document.getElementById(memory_tile_ids[0]);
 				    var tile_2 = document.getElementById(memory_tile_ids[1]);
 				    tile_1.style.background = 'url(tile_bg.jpg) no-repeat';
             	    tile_1.innerHTML = "";
 				    tile_2.style.background = 'url(tile_bg.jpg) no-repeat';
             	    tile_2.innerHTML = "";
-				    // Clear both arrays
+
 				    memory_values = [];
             	    memory_tile_ids = [];
 				}
