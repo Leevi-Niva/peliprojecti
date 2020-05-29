@@ -1,7 +1,7 @@
 Laskin
 <html>
 <head>
-<title> caculator </title>
+<title>  </title>
 </head>
 <body>
 <div class ="wrap">
